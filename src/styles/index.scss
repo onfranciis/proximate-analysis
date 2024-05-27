@@ -1,0 +1,23 @@
+$primary: rgb(48, 131, 143);
+$secondary: rgb(13, 28, 29);
+$tertiary: rgba(0, 128, 0, 0.744);
+$the_green: #458173;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  accent-color: $the_green !important;
+}
+
+body {
+  background-color: #303030;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+  padding: 10px 10px 100px;
+}
+
+@import "./App.scss";
+@import "./Form.scss";
+@import "./SideBar.scss";

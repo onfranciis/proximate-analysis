@@ -1,0 +1,93 @@
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   SIDEBAR                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.SideBar {
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  background-color: #303030;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  border-right: 2px solid $the_green;
+  padding: 15px 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transform: translateX(-300px);
+  transition: transform 0.2s;
+
+  &.toggled {
+    transform: translateX(0);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(128, 128, 128);
+    padding: 5px 8px;
+    border-radius: 5px;
+    transition: width 0.5s;
+  }
+
+  .selected {
+    width: 100%;
+    background-color: $the_green;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+      width: 50%;
+      aspect-ratio: 1;
+    }
+
+    .by {
+      background-color: transparent;
+      padding: 0 5px;
+
+      &:hover {
+        background-color: $the_green;
+      }
+    }
+  }
+}
+
+.thumb {
+  width: fit-content;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  position: fixed;
+  top: 50%;
+  left: 0%;
+
+  img {
+    height: 100%;
+  }
+}
+
+.SideBarBlur {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #30303037;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
